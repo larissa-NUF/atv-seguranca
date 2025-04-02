@@ -1,0 +1,5 @@
+# Ignore environment files
+.env
+
+# Ignore node_modules in the 27-03 folder
+27-03/node_modules/
