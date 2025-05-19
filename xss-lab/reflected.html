@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reflected XSS</title>
+</head>
+
+<body>
+    <p>Olá, <span id="usuario"></span></p>
+    <script>
+        //Código vulnerável:
+        //const nome = new URLSearchParams(location.search).get("nome");
+        //document.getElementById("usuario").innerHTML = nome;
+
+        const nome = new URLSearchParams(location.search).get("nome");
+        document.getElementById("usuario").textContent = nome;
+    </script>
+</body>
+
+</html>
